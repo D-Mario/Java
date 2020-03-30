@@ -110,3 +110,57 @@ public class Demo05ArrayUse {
     }
 }
 ```
+ - 数组索引越界异常：索引编号写错了
+ - 数组必须进行new初始化才能使用其中的元素。
+ - 如果只是赋值了一个null，没有进行new创建，那么就会发生空指针异常：NullPinterException
+ - 解决：补上new即可
+## 获取数组的长度
+ - 数组一旦创建，代表数组的长度不能改变
+ ```java
+ public class Demo03ArrayLength {
+     public static void main(String[] args) {
+         int[] arrayA = new int[3];
+
+         int[] arrayB = {1,12,123,132,13,132,123,13,123,13,123,12,313,13,12,3123,13};
+         int len = arrayB.length;
+         System.out.println("arrayB的数组长度为" + len);
+         System.out.println("=============");
+
+         int[] arrayC = new int[3];
+         System.out.println(arrayC.length);
+         arrayC = new int[5];
+         System.out.println(arrayC.length);
+     }
+ }
+
+ ```
+## 数组的遍历
+ - 遍历数组：默认处理方式：打印输出，对数组中的元素挨个儿处理
+ ```java
+ public class Demo04Array {
+     public static void main(String[] args) {
+         int[] array = {15, 25, 30, 40, 50};
+         //使用循环，次数是数组的长度
+         for (int i = 0; i < array.length; i++) {
+             System.out.println(array[i]);
+
+         }
+     }
+ }
+ ```
+### 求数组的最大值
+ ```java
+ public class Demo05ArrayMax {
+     public static void main(String[] args) {
+         int[] array = {5,10,30,20,1000};
+
+         int max = array[0];
+         for (int i = 1; i < array.length; i++) {
+             if (array[i] > max) {
+                 max = array[i];
+             }
+         }
+         System.out.println(max);
+     }
+ }
+ ```
