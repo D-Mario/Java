@@ -78,3 +78,5 @@ public class Demo02Annymous {
     }
 }
 ```
+## Random
+- 用来产生随机数字
